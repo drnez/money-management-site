@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Total Money Earned</h1>
+		<p id="total_earned"></p>
+
+		<h1>Total Money Owed</h1>
+
+		<h1>Withdraw Money</h1>
+
+		<script>
+			document.getElementById("total_earned").innerHTML = fetch("file:///totalmoney.txt");
+		</script>
+	</body>
+</html>
