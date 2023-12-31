@@ -9,7 +9,19 @@
 		<h1>Withdraw Money</h1>
 
 		<script>
-			document.getElementById("total_earned").innerHTML = fetch("https://drnez.github.io/money-management-site/totalmoney.txt");
+			"use strict";
+
+			const {readFile} = require("fs");
+
+			const fileRead = (path) => {
+				  readFile(path, (error, fileBuffer) => {
+					      if (error) {process.exit(1);}
+
+					      const fileContent = fileBuffer.toString();
+
+					      return fileContent;		    });
+			};
+			document.getElementById("total_earned").innerHTML = fileRead("https://drnez.github.io/money-management-site/totalmoney.txt");
 		</script>
 	</body>
 </html>
